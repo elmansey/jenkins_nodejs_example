@@ -12,7 +12,7 @@ pipeline{
         stage("CD") {
             steps {
                sh """ 
-                  docker run --name node-app-jenkins-container -p 3000:3000 node-app-jenkins 
+                  docker run --name node-app-jenkins-container -d -p 3000:3000 node-app-jenkins 
                   docker ps 
                 """
             }
